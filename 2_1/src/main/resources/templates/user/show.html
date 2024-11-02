@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1 class="mb-4">User Details</h1>
+
+    <ul class="list-group">
+        <li class="list-group-item">ID: <span th:text="${user.id}"></span></li>
+        <li class="list-group-item">Name: <span th:text="${user.username}"></span></li>
+        <li class="list-group-item">Pas: <span th:text="${user.password}"></span></li>
+    </ul>
+
+<!--    <a th:href="@{/user/{id}/edit(id=${user.id})}" class="btn btn-warning mt-3">Edit</a>-->
+<!--    <a href="/user" class="btn btn-secondary mt-3">Back to List</a>-->
+<!--    <form th:action="@{/user/{id}(id=${user.id})}" th:method="delete" class="d-inline">-->
+<!--        <button type="submit" class="btn btn-danger btn-sm">Delete</button>-->
+<!--    </form>-->
+    <a href="/logout" class="btn btn-secondary mt-3">Выйти</a>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
